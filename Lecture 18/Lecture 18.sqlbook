@@ -34,6 +34,8 @@ United States Congress dataset
 <font size = "5">
 
 Create table from codebook/dictionary
+-- SQLBook: Markup
+
 -- SQLBook: Code
 -- We start by deleting the old table
 -- SQL does not allow you to create a table if one already exists
@@ -130,6 +132,9 @@ WITH (DELIMITER ',', FORMAT csv, HEADER MATCH);
 -----  FORMAT indicates that this is a CSV
 -----  HEADER MATCH indicates that the first row contains column
 -----  names and should be ignored when importing.
+COPY us_congress_members
+From '/Users/yuxinfeng/Documents/GitHub/qtm151spring2023/Lecture 18/data/us_congress_members.csv'
+WITH (DELIMITER ',', FORMAT csv, HEADER MATCH);
 -- SQLBook: Markup
 <font size = "5">
 
